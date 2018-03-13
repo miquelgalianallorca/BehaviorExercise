@@ -20,20 +20,19 @@ void GameLocalServer::Update() {
 	for (auto entity : logicEntities) {
 		if (!isPaused) entity->Update();
 	}
-	Sleep(200);
+	Sleep(300);
 	clear();
 }
 
 void GameLocalServer::RegisterView(CGameView * _view) {
 	CGameServer::RegisterView(_view);
 	// Add visual entities
-	NewVisualEntityMessage * msg;
-	msg = new NewVisualEntityMessage(0, 0, 40, EntityType::HORSE);
-	StateChanged(msg);
-	delete msg;
-	msg = new NewVisualEntityMessage(1, 0, 0, EntityType::TURTLE);
-	StateChanged(msg);
-	delete msg;
+	for (auto logicEntity : logicEntities) {
+		NewVisualEntityMessage * msg = new NewVisualEntityMessage(logicEntity->GetID(),
+			logicEntity->GetPosX(), logicEntity->GetPosY(), logicEntity->GetType());
+		StateChanged(msg);
+		delete msg;
+	}
 }
 
 void GameLocalServer::StateChanged(Message *command) {

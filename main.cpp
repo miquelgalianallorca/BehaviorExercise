@@ -14,8 +14,8 @@ int main()
 	localView.Init(&localServer);
 
 	while (true) {
-		localServer.Update();
 		localView.Update();
+		localServer.Update();
 	}
 
 	return 0;
