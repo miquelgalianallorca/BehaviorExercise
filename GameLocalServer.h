@@ -16,6 +16,7 @@ public:
 	void Update();
 	
 	// Update views
+	void RegisterView(CGameView *_view);
 	void StateChanged(Message *command);
 	// Receive changes from view
 	void ManagePlayerCommand(Message *command);

@@ -6,9 +6,9 @@
 #include "Message.h"
 
 void CLogicEntity::Move() {
-	gotoxy(posX, posY);
-	ChangePosCommand *command = new ChangePosCommand(posX, posY);
+	ChangePosCommand *command = new ChangePosCommand(ID, posX, posY);
 	server->StateChanged(command);
+	delete command;
 }
 
 void CLogicEntityHorse::Update() {

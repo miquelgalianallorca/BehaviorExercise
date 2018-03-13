@@ -63,6 +63,9 @@
     <ClInclude Include="CVisualEntity.h">
       <Filter>Headers\Net\View</Filter>
     </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

@@ -29,14 +29,10 @@ void CGameViewLocal::Update() {
 void CGameViewLocal::StateChanged(Message *command) {
 	CGameView::StateChanged(command);
 	if (auto msg = dynamic_cast<NewVisualEntityMessage*>(command)) {
-		CVisualEntity *entity = nullptr;
-		if (msg->logicEntity->GetType() == CLogicEntity::Type::HORSE)
-			entity = new CVisualEntityHorse(msg->logicEntity->GetID(),
-				msg->logicEntity->GetPosX(), msg->logicEntity->GetPosY());
-		else if(msg->logicEntity->GetType() == CLogicEntity::Type::TURTLE)
-			entity = new CVisualEntityTurtle(msg->logicEntity->GetID(),
-				msg->logicEntity->GetPosX(), msg->logicEntity->GetPosY());
-		visualEntities.push_back(entity);
+		if (msg->type == EntityType::HORSE)
+			visualEntities.push_back(new CVisualEntityHorse (msg->ID, msg->posX, msg->posY));
+		else if (msg->type == EntityType::TURTLE)
+			visualEntities.push_back(new CVisualEntityTurtle(msg->ID, msg->posX, msg->posY));
 	}
 	else {
 		for (auto entity : visualEntities)

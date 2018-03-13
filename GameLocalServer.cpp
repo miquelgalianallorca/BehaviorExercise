@@ -13,9 +13,6 @@ void GameLocalServer::InitGame() {
 	CGameServer::InitGame();
 	logicEntities.push_back(new CLogicEntityHorse (this, 0, 40, 0));
 	logicEntities.push_back(new CLogicEntityTurtle(this, 1,  0, 0));
-
-	NewVisualEntityMessage * msg = new NewVisualEntityMessage();
-	StateChanged(message);
 }
 
 void GameLocalServer::Update() {
@@ -25,6 +22,18 @@ void GameLocalServer::Update() {
 	}
 	Sleep(200);
 	clear();
+}
+
+void GameLocalServer::RegisterView(CGameView * _view) {
+	CGameServer::RegisterView(_view);
+	// Add visual entities
+	NewVisualEntityMessage * msg;
+	msg = new NewVisualEntityMessage(0, 0, 40, EntityType::HORSE);
+	StateChanged(msg);
+	delete msg;
+	msg = new NewVisualEntityMessage(1, 0, 0, EntityType::TURTLE);
+	StateChanged(msg);
+	delete msg;
 }
 
 void GameLocalServer::StateChanged(Message *command) {

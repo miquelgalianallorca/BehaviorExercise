@@ -5,8 +5,10 @@
 
 void CVisualEntity::StateChanged(Message *command) {
 	if (auto msg = dynamic_cast<ChangePosCommand*>(command)) {
-		posX = msg->posX;
-		posY = msg->posY;
+		if (msg->ID == ID) {
+			posX = msg->posX;
+			posY = msg->posY;
+		}
 	}
 }
 

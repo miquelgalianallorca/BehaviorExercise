@@ -15,6 +15,7 @@ int main()
 
 	while (true) {
 		localServer.Update();
+		localView.Update();
 	}
 
 	return 0;

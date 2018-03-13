@@ -1,14 +1,15 @@
 #pragma once
 
+#include "globals.h"
+
 class CGameServer;
 
 class CLogicEntity {
 public:
-	enum class Type { HORSE, TURTLE };
 	virtual ~CLogicEntity() {}
 	virtual void Update() = 0;
 
-	virtual Type GetType() const = 0;
+	virtual EntityType GetType() const = 0;
 	int GetID()   const { return ID;   }
 	int GetPosX() const { return posX; }
 	int GetPosY() const { return posY; }
@@ -22,7 +23,7 @@ protected:
 	int ID;
 	int posX;
 	int posY;
-	Type type;
+	EntityType type;
 	CGameServer *server;
 };
 
@@ -31,7 +32,7 @@ public:
 	CLogicEntityHorse(CGameServer* _server, int _ID, int _posX, int _posY) :
 		CLogicEntity(_server, _ID, _posX, _posY) {}
 	void Update();
-	Type GetType() const { return Type::HORSE; }
+	EntityType GetType() const { return EntityType::HORSE; }
 };
 
 class CLogicEntityTurtle : public CLogicEntity {
@@ -39,5 +40,5 @@ public:
 	CLogicEntityTurtle(CGameServer* _server, int _ID, int _posX, int _posY) :
 		CLogicEntity(_server, _ID, _posX, _posY) {}
 	void Update();
-	Type GetType() const { return Type::TURTLE; }
+	EntityType GetType() const { return EntityType::TURTLE; }
 };
