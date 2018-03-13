@@ -13,6 +13,9 @@ void GameLocalServer::InitGame() {
 	CGameServer::InitGame();
 	logicEntities.push_back(new CLogicEntityHorse (this, 0, 40, 0));
 	logicEntities.push_back(new CLogicEntityTurtle(this, 1,  0, 0));
+
+	NewVisualEntityMessage * msg = new NewVisualEntityMessage();
+	StateChanged(message);
 }
 
 void GameLocalServer::Update() {

@@ -6,7 +6,7 @@ class CLogicEntity {
 public:
 	enum class Type { HORSE, TURTLE };
 	virtual ~CLogicEntity() {}
-	virtual void Update() = 0;	
+	virtual void Update() = 0;
 
 	virtual Type GetType() const = 0;
 	int GetID()   const { return ID;   }

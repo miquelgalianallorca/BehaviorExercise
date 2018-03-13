@@ -21,5 +21,8 @@ struct ChangePosCommand :public Message {
 };
 
 struct NewVisualEntityMessage : public Message {
-	CLogicEntity *logicEntity;
+	int ID;
+	int posX;
+	int posY;
+	EntityType type;
 };
