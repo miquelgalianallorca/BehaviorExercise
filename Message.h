@@ -17,7 +17,7 @@ struct PauseCommand : public Message {
 };
 
 struct ChangePosCommand :public Message {
-	ChangePosCommand(int x, int y, int _ID) : ID(_ID), posX(x), posY(y) {}
+	ChangePosCommand(int _ID, int x, int y) : ID(_ID), posX(x), posY(y) {}
 	int ID;
 	int posX;
 	int posY;

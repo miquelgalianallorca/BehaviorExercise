@@ -11,8 +11,8 @@ GameLocalServer::~GameLocalServer() {
 
 void GameLocalServer::InitGame() {
 	CGameServer::InitGame();
-	logicEntities.push_back(new CLogicEntityHorse (this, 0, 40, 0));
-	logicEntities.push_back(new CLogicEntityTurtle(this, 1,  0, 0));
+	logicEntities.push_back(new CLogicEntityHorse (this, 1, 40, 0));
+	logicEntities.push_back(new CLogicEntityTurtle(this, 2,  0, 0));
 }
 
 void GameLocalServer::Update() {
