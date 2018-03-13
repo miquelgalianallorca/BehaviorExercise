@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="consola.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="compat.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameServer.cpp">
+      <Filter>Source\Net\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogicEntity.cpp">
+      <Filter>Source\Net\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLocalServer.cpp">
+      <Filter>Source\Net\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="CVisualEntity.cpp">
+      <Filter>Source\Net\View</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameViewLocal.cpp">
+      <Filter>Source\Net\View</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameView.cpp">
+      <Filter>Source\Net\View</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="consola.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Headers\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameServer.h">
+      <Filter>Headers\Net\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="CLogicEntity.h">
+      <Filter>Headers\Net\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLocalServer.h">
+      <Filter>Headers\Net\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameView.h">
+      <Filter>Headers\Net\View</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameViewLocal.h">
+      <Filter>Headers\Net\View</Filter>
+    </ClInclude>
+    <ClInclude Include="CVisualEntity.h">
+      <Filter>Headers\Net\View</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{de38bcdf-027c-4bd9-80a9-8608adf1503f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{690f334b-e67d-4953-a619-831e583e46c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Net">
+      <UniqueIdentifier>{37ae5c4e-7b77-4148-8652-715bb2d4d6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Net">
+      <UniqueIdentifier>{0c879921-0428-40e7-afce-9cc558599e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Net\Server">
+      <UniqueIdentifier>{7c99083b-0e26-420c-9ca9-231c38ffb3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Net\View">
+      <UniqueIdentifier>{d9f888a8-d719-4c88-9368-e3f4293c3a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Net\Server">
+      <UniqueIdentifier>{0d539bd8-2fe2-4aae-b1e0-0b8861dd6f5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Net\View">
+      <UniqueIdentifier>{93d4f4d4-49ab-451f-8edc-1c3dc587ac21}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
